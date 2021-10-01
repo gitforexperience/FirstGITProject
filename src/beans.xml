@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- constructor injection -->
+<bean id="lst" class="com.collections.CollectionsInSpring">
+<constructor-arg>
+
+<list>
+
+<value>mango</value>
+<value>Apple</value>
+<value>banana</value>
+
+</list>
+</constructor-arg>
+
+<constructor-arg>
+<set>
+
+<value>Sachin</value>
+<value>Kohli </value>
+<value>MS Dhoni</value> 
+
+</set>
+
+</constructor-arg>
+
+
+<constructor-arg>
+<map>
+
+ <entry key="India" value="Delhi"/>
+ <entry key="USA" value="Washington DC"/>
+
+</map>
+
+</constructor-arg>
+
+</bean>
+  <!-- Setter injection -->
+    <bean id="lstbySetter" class="com.collections.CollectionsInSpring">
+<property name="fruits">
+
+<list>
+
+<value>pineapple</value>
+<value>orange</value>
+<value>sapota</value>
+
+</list>
+
+</property>
+
+<property name="cricketers">
+<set>
+
+<value>Ganguly</value>
+<value>Dravid </value>
+<value>sunil Gavaskar</value> 
+
+</set>
+</property>
+
+<property name="CountriesCaptials">
+<map>
+
+ <entry key="Russia" value="Moscow"/>
+ <entry key="pakistan" value="islamabad"/>
+
+</map>
+</property>
+
+
+</bean> 
+</beans>
